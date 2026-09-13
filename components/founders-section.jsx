@@ -3,6 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Linkedin, Instagram, Mail } from "lucide-react"
+import { withBasePath } from "@/lib/base-path"
 
 export function FoundersSection() {
   const founders = [
@@ -56,7 +57,7 @@ export function FoundersSection() {
               <CardContent className="p-8 text-center space-y-6">
                 <div className="w-32 h-32 mx-auto rounded-full overflow-hidden bg-muted">
                   <img
-                    src={founder.image || "/Joshua_Picture.jpg"}
+                    src={withBasePath(founder.image || "/Joshua_Picture.jpg")}
                     alt={founder.name}
                     className="w-full h-full object-cover"
                   />

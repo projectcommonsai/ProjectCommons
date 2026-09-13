@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
+import { withBasePath } from "@/lib/base-path"
 
 export function Header() {
   const scrollToSection = (sectionId) => {
@@ -23,7 +24,7 @@ export function Header() {
           <div className="flex items-center space-x-3">
             <Link href="/" className="flex items-center space-x-3">
               <Image
-                src="/BlackVersionLogo.png"
+                src={withBasePath("/BlackVersionLogo.png")}
                 alt="Project Commons Logo"
                 width={40}
                 height={40}

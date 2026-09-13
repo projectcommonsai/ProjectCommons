@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, Target, Lightbulb, Heart } from "lucide-react"
+import { withBasePath } from "@/lib/base-path"
 
 export default function AboutPage() {
   return (
@@ -12,7 +13,7 @@ export default function AboutPage() {
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center gap-3">
               <Image
-                src="/BlackVersionLogo.png"
+                src={withBasePath("/BlackVersionLogo.png")}
                 alt="Project Commons"
                 width={40}
                 height={40}

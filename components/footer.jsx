@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { Instagram, MessageCircle, Mail } from "lucide-react"
+import { withBasePath } from "@/lib/base-path"
 
 export function Footer() {
   const scrollToSection = (sectionId) => {
@@ -23,7 +24,7 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <Image
-                src="/BlackVersionLogo.png"
+                src={withBasePath("/BlackVersionLogo.png")}
                 alt="Project Commons Logo"
                 width={32}
                 height={32}

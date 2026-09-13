@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card"
 import Link from "next/link"
+import { withBasePath } from "@/lib/base-path"
 
 export function TeamSection() {
   const officers = [
@@ -58,7 +59,7 @@ export function TeamSection() {
               <CardContent className="p-6 text-center space-y-4">
                 <div className="w-20 h-20 mx-auto rounded-full overflow-hidden bg-muted">
                   <img
-                    src={officer.image || "/placeholder.svg"}
+                    src={withBasePath(officer.image || "/placeholder.svg")}
                     alt={officer.name}
                     className="w-full h-full object-cover"
                   />

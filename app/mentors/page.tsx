@@ -2,6 +2,7 @@ import { ArrowRight, Users, BookOpen, Heart, CheckCircle, ArrowLeft } from "luci
 import Link from "next/link"
 import Image from "next/image"
 import { Footer } from "@/components/footer"
+import { withBasePath } from "@/lib/base-path"
 
 export default function MentorsPage() {
   return (
@@ -11,7 +12,7 @@ export default function MentorsPage() {
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center gap-3">
               <Image
-                src="/BlackVersionLogo.png"
+                src={withBasePath("/BlackVersionLogo.png")}
                 alt="Project Commons"
                 width={40}
                 height={40}

@@ -3,6 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, Users, BookOpen, Zap } from "lucide-react"
+import { withBasePath } from "@/lib/base-path"
 
 export function HeroSection() {
   const joinCommunity = () => {
@@ -71,7 +72,7 @@ export function HeroSection() {
           <div className="relative">
             <div className="relative z-10">
               <Image
-                src="/BlackVersionLogo.png"
+                src={withBasePath("/BlackVersionLogo.png")}
                 alt="Project Commons"
                 width={400}
                 height={400}
